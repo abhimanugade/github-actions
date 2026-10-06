@@ -10,3 +10,5 @@ jobs:
         run: echo "hello this is first workflow in github action"
       - name: by github Action
         run: echo "by this is first workflow in github action"
+      - name: "fail job intentionally"
+        run: exit 1
