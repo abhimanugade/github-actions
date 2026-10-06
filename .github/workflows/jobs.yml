@@ -1,7 +1,11 @@
 name: jobs test
 on: 
-    push
+    #push
     #workflow_dispatch: 
+    workflow_run:
+        workflows: ["First Workflow"]
+        types:
+            - completed
 jobs: 
     validate-html: 
         runs-on: ubuntu-latest
